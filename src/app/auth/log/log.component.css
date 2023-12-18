@@ -1,0 +1,97 @@
+.register_container {
+  position: absolute;
+  width: 322px;
+  height: 310px;
+  border-radius: 18px;
+  background-color: #FFFFFF;
+  left: 800px;
+  top: 220px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.form_title {
+  width: 209px;
+  height: 38px;
+  color: #3C3B3B;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 55px;
+  margin-top: 30px;
+}
+
+.form_field {
+  margin-left: 40px;
+  margin-bottom: 5px;
+}
+
+.form_fields {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 247px;
+  height: 33px;
+  border-radius: 6px;
+  border: 1px solid;
+  color: #3C3B3B;
+  padding-left: 10px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+button {
+  width: 180px;
+  height: 44px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.form_buttons {
+  padding-left: 75px;
+}
+
+button:hover {
+  background-color: #949DB4;
+}
+
+button[disabled] {
+  cursor: no-drop;
+  background-color: #FFFFFF;
+}
+
+.reg_word {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.reg_link:hover {
+  color: #0703BB;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form_errors_message {
+  margin-left: 55px;
+  color: red;
+}
+
+.error_message {
+  position: absolute;
+  width: 322px;
+  height: 50px;
+  left: 800px;
+  top: 290px;
+}
+.alert {
+  color:red;
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <label>Добавление пользователя:</label>
+  <input type="text" name="name" placeholder="Введите почту"
+         ngModel
+         #name="ngModel"
+         required>
+  <span class="form_errors_message" *ngIf="name.invalid && name.touched">
+      <span>Поле обязательно для заполнения</span>
+    </span>
+
+  <input type="text" placeholder="Введите имя"
+         ngModel
+         #date="ngModel"
+         required>
+  <span class="form_errors_message" *ngIf="date.invalid && date.touched">
+      <span>Поле обязательно для заполнения</span>
+    </span>
+  <input type="text" placeholder="Введите пароль"
+         ngModel
+         #date="ngModel"
+         required>
+  <span class="form_errors_message" *ngIf="date.invalid && date.touched">
+      <span>Поле обязательно для заполнения</span>
+    </span>
+  <div class="form_buttons">
+    <button class="button" type="submit" [disabled]="f.invalid">Добавить пользователя</button>
+  </div>
+</form>
+
+

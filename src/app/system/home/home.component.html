@@ -1,0 +1,42 @@
+<div class="section">
+  <div class="picture">
+    <img [src]="imagePath"/>
+  </div>
+  <div class="textbox">
+    <h1>Приветствую тебя на своем сайте, посвященном творчеству Стивена Кинга!</h1>
+    <p>Здесь ты сможешь прочитать мою историю знакомства с данным автором. Посмотреть самые популярные его романы, а также делиться своими впечатлениями о них.</p>
+    <p>Желаю удачи и приятного времяпровождения!</p>
+  </div>
+</div>
+<div class="section">
+  <div class="picture">
+    <img [src]="imagePathv2"/>
+  </div>
+  <div class="textbox">
+    <h1>Моя история знакомства с автором</h1>
+    <p>Со Стивеном Кингом я познакомился в 8 классе, когда моя одноклассница посоветовала мне прочитать книгу "КлаТбище домашних жЫвотных.
+      Данная книга меня очень впечатлила своим сюжетом и скрытым посылом о назначении природы и человека. После этого мое желание читать его романы
+      одним за другим повышалось. К концу 9 класса в моей коллекции находилось около 13 романов, 3 из которых представляли собой циклы."</p>
+    <p><em>"КлаТбище домашних жЫвотных" - 1983 год.</em></p>
+  </div>
+</div>
+<div class="form-user">
+  <form #f="ngForm" (ngSubmit)="submitForm(f)">
+    <label>Теперь я бы хотел попросить тебя заполнить некоторые данные о себе</label>
+    <input name="favoriteBook" placeholder="Какая ваша любимая книга?"
+           ngModel
+           #favoriteBook="ngModel"
+           required>
+    <span class="form_errors_message" *ngIf="favoriteBook.invalid && favoriteBook.touched">
+      <span>Поле обязательно для заполнения</span>
+    </span>
+    <input name="readingTime" placeholder="Сколько времени вы читаете?"
+           ngModel
+           #readingTime="ngModel"
+           required>
+    <span class="form_errors_message" *ngIf="readingTime.invalid && readingTime.touched">
+      <span>Поле обязательно для заполнения</span>
+    </span>
+    <button type="submit" [disabled]="f.invalid">Отправить данные</button>
+  </form>
+</div>

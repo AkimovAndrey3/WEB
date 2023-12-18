@@ -1,0 +1,23 @@
+<div class="sideinfo">
+  <div class="user-avatar">
+    <img [src]="imagePath"/>
+  </div>
+  <div class="user-name">{{user.name}}</div>
+  <div class="user-email">{{user.email}}</div>
+  <div class="user-email">{{user.password}}</div>
+  <div class="information-user">
+    <p class="user-name">Любимая книга:<br></p>
+    <p class="user-book">{{user.favoriteBook}}</p>
+    <p class="user-name">Стаж чтения:</p>
+    <p class="user-time">{{user.readingTime}}</p>
+  </div>
+  <div class="exit" (click)="onLogOut()">
+    <a>Выход</a>
+  </div>
+  <div class="exit" (click)="onSubmit()">
+    <a>Удалить аккаунт</a>
+  </div>
+</div>
+<div class="content">
+  <app-records></app-records>
+</div>

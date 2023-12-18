@@ -1,0 +1,35 @@
+<div class="table-collection">
+  <h1>Все рецензии:</h1>
+  <div class="table-search">
+    <div class="form-group">
+      <input type="text" class="form-control"
+      [placeholder]="searchPlaceholder"
+      [(ngModel)]="searchValue"
+      >
+      <button mat-button [matMenuTriggerFor]="menu">Фильтры</button>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item (click)="changeCriteria('name')">Название</a>
+        <a mat-menu-item (click)="changeCriteria('date')">Дата</a>
+        <a mat-menu-item (click)="changeCriteria('id')">Номер</a>
+      </mat-menu>
+    </div>
+  </div>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Название</th>
+      <th>Дата</th>
+      <th>Описание</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of records | appFilter:searchValue:searchField;">
+      <td>{{c.id}}</td>
+      <td>{{c.name}}</td>
+      <td>{{c.date}}</td>
+      <td>{{c.description}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

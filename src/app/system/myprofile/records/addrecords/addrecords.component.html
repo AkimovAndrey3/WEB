@@ -1,0 +1,35 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <label>Добавление рецензии к книге:</label>
+    <input type="text" name="name" placeholder="Введи название книги:"
+           ngModel
+           #name="ngModel"
+           required>
+    <span class="form_errors_message" *ngIf="name.invalid && name.touched">
+      <span>Поле обязательно для заполнения</span>
+    </span>
+
+    <input type="date" id="date" name="date"
+            ngModel
+            #date="ngModel"
+            required>
+    <span class="form_errors_message" *ngIf="date.invalid && date.touched">
+      <span>Поле обязательно для заполнения</span>
+    </span>
+
+    <textarea id="review" name="description" rows="4" placeholder="Введите текст рецензии:"
+    ngModel
+    #description="ngModel"
+    required></textarea>
+    <span class="form_errors_message" *ngIf="description.invalid && description.touched">
+      <span>Поле обязательно для заполнения</span>
+    </span>
+    <div class="form_buttons">
+      <button class="button" type="submit" [disabled]="f.invalid">Добавить рецензию</button>
+    </div>
+</form>
+<div class="error_message">
+  <div class="alert alert-{{message.type}}"
+       *ngIf="message.text">
+    {{message.text}}
+  </div>
+</div>

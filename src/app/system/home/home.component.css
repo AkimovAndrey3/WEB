@@ -1,0 +1,81 @@
+.section {
+  display: flex;
+  width: 60%;
+  height: 300px;
+  margin-left: 350px;
+  margin-top: 20px;
+}
+
+.picture {
+  width: 405px;
+  height: 271px;
+  border: 2px solid black;
+}
+
+.textbox {
+  margin-left: 30px;
+}
+
+.textbox h1 {
+  font-size: 25px;
+}
+
+.textbox p {
+  margin-top: 25px;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.form-user {
+  margin-left: 25px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 500px;
+  height: 34px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+button[disabled] {
+  cursor: no-drop;
+  background-color: #FFFFFF;
+}
+
+button:hover {
+  background-color: #949DB4;
+  cursor: pointer;
+}
+
+.form_errors_message {
+  margin-left: 125px;
+  margin-bottom: 5px;
+  color: red;
+  text-align: center;
+
+}
+

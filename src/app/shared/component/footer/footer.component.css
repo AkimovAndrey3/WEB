@@ -1,0 +1,11 @@
+footer{
+    background-color:#949DB4;
+    height:132px;
+    color:black;
+    font-size:30px;
+    text-align:left;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    border:2px solid black;
+}

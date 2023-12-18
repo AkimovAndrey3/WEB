@@ -1,0 +1,118 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "email": "admin@mail.ru",
+      "password": "123456",
+      "name": "Администратор",
+      "favoriteBook": "Черный дом",
+      "readingTime": "10 лет",
+      "id": 1
+    },
+    {
+      "email": "TestProfile@yandex.ru",
+      "password": "qwepoi",
+      "name": "white_prince_",
+      "favoriteBook": "Сияние",
+      "readingTime": "5 лет",
+      "id": 2
+    },
+    {
+      "email": "akimova.andr@yandex.ru",
+      "password": "321321421",
+      "name": "Андрей",
+      "favoriteBook": "Талисман",
+      "readingTime": "5 лет",
+      "id": 3
+    },
+    {
+      "email": "TestProfile2@yandex.ru",
+      "password": "321321421",
+      "name": "Nagibator3000",
+      "favoriteBook": "ОНО",
+      "readingTime": "1 год",
+      "id": 4
+    }
+  ],
+  "record": [
+    {
+      "name": "Кэрри",
+      "date": "2023-11-09",
+      "description": "Тест изменения поста!",
+      "author": "Администратор",
+      "id": 1
+    },
+    {
+      "name": "КлаТбище домашних жЫвотных",
+      "date": "0123-12-01",
+      "description": "Измененная рецензия!",
+      "author": "white_prince_",
+      "id": 2
+    },
+    {
+      "name": "Сияние",
+      "date": "2023-04-12",
+      "description": "Тест изменения рецензии!",
+      "author": "white_prince_",
+      "id": 3
+    },
+    {
+      "name": "Куджо",
+      "date": "2023-03-19",
+      "description": "Тест книги!",
+      "author": "white_prince_",
+      "id": 4
+    },
+    {
+      "name": "Безнадега",
+      "date": "2024-12-07",
+      "description": "Тест изменения поста с именем пользователя",
+      "author": "Администратор",
+      "id": 5
+    },
+    {
+      "name": "Черный дом",
+      "date": "2023-03-16",
+      "description": "Тест!",
+      "author": "white_prince_",
+      "id": 6
+    },
+    {
+      "name": "Жребий Салема",
+      "date": "2024-03-12",
+      "description": "Крутая Книга! x2",
+      "author": "white_prince_",
+      "id": 7
+    },
+    {
+      "name": "Мизери",
+      "date": "2023-01-01",
+      "description": "Тест добавления рецензии, а также изменения.",
+      "author": "white_prince_",
+      "id": 8
+    },
+    {
+      "name": "артемий янин",
+      "date": "2333-12-12",
+      "description": "артемий янин крутой x2",
+      "author": "Артемий",
+      "id": 9
+    }
+  ]
+}

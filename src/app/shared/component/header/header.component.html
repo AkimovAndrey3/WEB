@@ -1,0 +1,13 @@
+<nav>
+  <div class="container">
+    <h1>Стивен Кинг</h1>
+    <div class="nav-wrap">
+      <ul class="nav-menu">
+        <li><a [routerLink]="['/system','home']">Главная страница</a></li>
+        <li><a [routerLink]="['/system','contact']">Мои записи</a></li>
+        <li *ngIf="userIsAdmin"><a [routerLink]="['/system','profile']">{{user.name}}</a></li>
+        <li *ngIf="!userIsAdmin"><a [routerLink]="['/system','profile']">Здравствуйте, {{user.name}}!</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

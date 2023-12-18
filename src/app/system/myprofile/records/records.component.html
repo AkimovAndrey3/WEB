@@ -1,0 +1,31 @@
+<div class="link-container-admin" *ngIf="userIsAdmin">
+  <a (click)="clickRecords()">Рецензии</a>
+  <a (click)="clickUser()">Пользователь</a>
+</div>
+<div class="link-container" *ngIf="isRecords">
+  <a (click)="clickAddRecords()">Добавить рецензию</a>
+  <a (click)="clickEditRecords()">Изменить рецензию</a>
+</div>
+<div class="link-container" *ngIf="isUser">
+  <a (click)="clickAddUser()">Добавить пользователя</a>
+  <a (click)="clickEditUser()">Изменить пользователя</a>
+</div>
+<section *ngIf="!isLoaded">
+  Загрузка...
+</section>
+<section *ngIf="isLoaded && isRecords">
+  <div *ngIf="isAddRecords">
+    <app-addrecords (onRecordAdd)="newRecordAdded($event)"></app-addrecords>
+  </div>
+  <div *ngIf="isEditRecords">
+    <app-editrecords [records]="records" (onRecordEdit)="recordWasEdited($event)"></app-editrecords>
+  </div>
+</section>
+<section *ngIf="isLoaded && isUser">
+  <div *ngIf="isAddUser">
+    <app-addusers></app-addusers>
+  </div>
+  <div *ngIf="isEditUser">
+    <app-editusers></app-editusers>
+  </div>
+</section>

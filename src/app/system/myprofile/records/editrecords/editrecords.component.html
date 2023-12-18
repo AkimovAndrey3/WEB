@@ -1,0 +1,55 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <label for="title">Изменение рецензии:</label>
+    <div class="input-group">
+      <select class="form-control"
+        id="e-select-category"
+        [(ngModel)]="currentRecordId"
+        (change)="onRecordChange()"
+        [ngModelOptions]="{standalone:true}"
+      >
+        <option *ngFor="let c of records"
+        [value]="c.id">
+          {{c.name}}
+        </option>
+      </select>
+      <span class="input-group-addon"><i class="fa fa-user ti-user"></i></span>
+      <input type="text" id="title" name="name" placeholder="Введи название книги:"
+               ngModel
+               #name="ngModel"
+                [ngModel]="currentRecord.name"
+               required>
+      <span class="form_errors_message" *ngIf="name.invalid && name.touched">
+        <span>Поле обязательно для заполнения</span>
+      </span>
+      <input type="date" id="date" name="date"
+             ngModel
+             #date="ngModel"
+             [ngModel]="currentRecord.date"
+             required>
+      <span class="form_errors_message" *ngIf="date.invalid && date.touched">
+      <span>Поле обязательно для заполнения</span>
+      </span>
+      <textarea id="review" name="description" rows="4" placeholder="Введите текст рецензии:"
+      ngModel
+      #description="ngModel"
+      required
+                [ngModel]="currentRecord.description"
+      >
+      </textarea>
+      <span class="form_errors_message" *ngIf="description.invalid && description.touched">
+        <span>Поле обязательно для заполнения</span>
+      </span>
+    </div>
+    <div class="form_buttons">
+      <button class="button" type="submit" [disabled]="f.invalid">Изменить рецензию</button>
+    </div>
+    <div class="form_buttons" *ngIf="isAdmin">
+      <button class="button" type="button" (click)="onRecordDelete()">Удалить рецензию</button>
+    </div>
+</form>
+<div class="error_message">
+  <div class="alert alert-{{message.type}}"
+       *ngIf="message.text">
+    {{message.text}}
+  </div>
+</div>
